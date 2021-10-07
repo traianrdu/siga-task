@@ -34,6 +34,8 @@ namespace CppCLRWinformsProjekt {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Panel^ panel1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +50,32 @@ namespace CppCLRWinformsProjekt {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->SuspendLayout();
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(53)));
+			this->panel1->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(186, 577);
+			this->panel1->TabIndex = 0;
+			// 
+			// Form1
+			// 
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(24)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+				static_cast<System::Int32>(static_cast<System::Byte>(73)));
+			this->ClientSize = System::Drawing::Size(951, 577);
+			this->Controls->Add(this->panel1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Name = L"Form1";
 			this->Text = L"Form1";
-			this->Padding = System::Windows::Forms::Padding(0);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	};
